@@ -1,68 +1,104 @@
-# SapBERT-based Hybrid Re-ranking for BioNNE-L 2025-1
+# 🧠 SapBERT-based Hybrid Re-ranking for BioNNE-L 2025-1
 
-This repository contains the code for the **VerbaNex AI Lab**'s submission to the **BioNNE-L 2025-1 challenge** (Subtask 1: English), achieving **first place in Accuracy@1 (0.70)**. The project implements a biomedical entity linking (BEL) system using SapBERT with a hybrid re-ranking strategy (cosine, Jaccard, Levenshtein similarities) via two Jupyter notebooks.
+This repository contains the codebase for the **VerbaNex AI Lab**'s submission to the **BioNNE-L 2025-1 Challenge (Subtask 1: English)**, which achieved **1st place in Accuracy@1 (0.70)**. The system implements a biomedical entity linking (BEL) pipeline using **SapBERT** enhanced by a hybrid re-ranking strategy that combines **cosine**, **Jaccard**, and **Levenshtein** similarities.
 
-## Introduction
+---
 
-The BioNNE-L 2025-1 challenge advances BEL by mapping English biomedical text mentions to UMLS concepts (disorders, chemicals, anatomy). Our system, implemented in two notebooks, downloads the BioNNE-L dataset, generates SapBERT embeddings, applies re-ranking, and saves metrics, achieving an Accuracy@1 of 0.718 on the development set.
+## 📘 Introduction
 
-See our paper: *SapBERT-based Hybrid Re-ranking for Biomedical Entity Linking in BioNNE-L 2025-1* (CLEF 2025 Working Notes).
+The **BioNNE-L 2025-1** challenge focuses on mapping English biomedical entity mentions to **UMLS concepts** (e.g., disorders, chemicals, anatomy).
 
-## Installation
+Our system:
+- Generates **SapBERT embeddings** for candidate concepts.
+- Applies a **hybrid re-ranking mechanism**.
+- Outputs top-k predictions with competitive evaluation metrics.
 
-### Prerequisites
+📄 Refer to our paper:  
+**_Hybrid Re-ranking for Biomedical Entity Linking using SapBERT Embeddings: A High-Performance System for BioNNE-L 2025-1_**, CLEF 2025 Working Notes.
+
+---
+
+## ⚙️ Installation
+
+### ✅ Prerequisites
 - Python 3.8+
 - NVIDIA GPU (recommended: A100)
 - Jupyter Notebook
 - Git
 
-### Steps
-1. Clone the repository:
+### 📦 Setup Steps
+
+1. **Clone the repository:**
 ```bash
-git clone https://github.com/your-username/bionne-l-2025.git
-cd bionne-l-2025
+    git clone https://github.com/VerbaNexAI/CLEF2025.git  
+    cd CLEF2025/BioASQ_Task_4_BioNNE-L
 ```
-2. Create a virtual environment:
+2. **Create a virtual environment:**
 ```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: 'venv\Scripts\activate'
+    python -m venv venv  
+    source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
-3. Install dependencies:
+3. **Install dependencies:**
 ```bash
-pip install -r requirements.txt
+    pip install -r requirements.txt
 ```
-   Includes 'jupyter', 'transformers', 'torch', 'pandas', 'scikit-learn', 'tqdm', 'python-levenshtein', 'datasets'.
+Packages include:  
+`jupyter`, `transformers`, `torch`, `pandas`, `scikit-learn`, `tqdm`, `python-Levenshtein`, `datasets`
 
-4. Launch Jupyter Notebook:
-```bash
-jupyter notebook
-```
+---
 
-## Usage
+## 🚀 Usage
 
-### Notebooks
-- **'notebook/find_best_model.ipynb'**: Compares models (SapBERT, PubMedBERT, BioBERT, baseline) and computes metrics (Accuracy@1, Accuracy@5, MRR).
-- **'notebook/reranking_sapbert.ipynb'**: Executes the BEL pipeline, downloading the dataset to 'data/bionne_l_dataset/', generating embeddings, re-ranking, and saving metrics to 'results/'.
+### 📒 Notebooks
 
-### Running the Pipeline
-1. Open Jupyter Notebook and navigate to 'notebook/'.
-2. Run 'reranking_sapbert.ipynb' to:
-   - Download the dataset.
-   - Process data, generate embeddings, and apply re-ranking.
-   - Save metrics to 'data/results/'.
-3. Run 'find_best_model.ipynb' to compare model performance.
+- **`notebook/find_best_model.ipynb`**  
+  Compares SapBERT, PubMedBERT, BioBERT, and a baseline model using:
+  - Accuracy@1
+  - Accuracy@5
+  - MRR (Mean Reciprocal Rank)
 
-## Results
-- **Development Set**: Accuracy@1: 0.718, Accuracy@5: 0.802, MRR: 0.750.
-- **Competition**: 1st in Accuracy@1 (0.70), 4th in Accuracy@5 (0.80), 2nd in MRR (0.74).
+- **`notebook/reranking_sapbert.ipynb`**  
+  Executes the BEL pipeline using **SapBERT + hybrid re-ranking**.  
+  Tasks:
+  - Download and preprocess dataset
+  - Generate embeddings
+  - Apply cosine, Jaccard, and Levenshtein re-ranking
+  - Save evaluation metrics to `data/results/`
 
-Run 'find_best_model.ipynb' to reproduce results.
+### ▶️ Running the Pipeline
 
-## Acknowledgments
-- **VerbaNex AI Lab** for collaboration.
-- **Universidad Tecnológica de Bolívar** for support.
-- **Hugging Face** for the BioNNE-L dataset.
+1. Launch **Jupyter Notebook** and navigate to the `notebook/` directory.
+2. Run `reranking_sapbert.ipynb` to build the full pipeline.
+3. Run `find_best_model.ipynb` to evaluate and compare performance across models.
 
-## Contact
-- Daniel Peña Gnecco: [dgnecco@utb.edu.co](mailto:dgnecco@utb.edu.co)
-```
+---
+
+## 📊 Results
+
+### Development Set
+- **Accuracy@1**: `0.718`
+- **Accuracy@5**: `0.802`
+- **MRR**: `0.750`
+
+### BioNNE-L 2025-1 Competition
+- 🥇 **1st** in Accuracy@1 (`0.70`)
+- 🏅 **4th** in Accuracy@5 (`0.80`)
+- 🥈 **2nd** in MRR (`0.74`)
+
+➡️ Reproduce dev results by running `find_best_model.ipynb`.
+
+---
+
+## 🙏 Acknowledgments
+
+- **VerbaNex AI Lab** – Team collaboration and development  
+- **Universidad Tecnológica de Bolívar** – Institutional support  
+- **Hugging Face Datasets** – Access to BioNNE-L and SapBERT models
+
+---
+
+## 📬 Contact
+
+**Daniel Peña Gnecco**  
+📧 [dgnecco@utb.edu.co](mailto:dgnecco@utb.edu.co)  
+🔗 [LinkedIn](https://www.linkedin.com/in/danielarturopeña) | [GitHub](https://github.com/Danp06)
