@@ -140,20 +140,18 @@ def get_openrouter_completion(messages, model_name, max_retries=3, retry_delay=2
     thread_id = threading.current_thread().name
 
     # Get API key from environment variables
-    # api_key = os.getenv("OPENROUTER_API_KEY")
-    # if not api_key:
-    #     logging.error(
-    #         f"[{thread_id}] OPENROUTER_API_KEY not found in environment variables"
-    #     )
-    #     raise ValueError("OPENROUTER_API_KEY not found in environment variables")
-    # # Log the request (but don't log full messages to avoid exposing sensitive data)
-    # logging.info(
-    #     f"[{thread_id}] Making request to OpenRouter API using model: {model_name}"
-    # )
-
-    api_key = (
-        "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"
+    api_key = os.getenv("OPENROUTER_API_KEY")
+    if not api_key:
+        logging.error(
+            f"[{thread_id}] OPENROUTER_API_KEY not found in environment variables"
+        )
+        raise ValueError("OPENROUTER_API_KEY not found in environment variables")
+    # Log the request (but don't log full messages to avoid exposing sensitive data)
+    logging.info(
+        f"[{thread_id}] Making request to OpenRouter API using model: {model_name}"
     )
+
+    
     retries = 0
     while retries <= max_retries:
         try:
