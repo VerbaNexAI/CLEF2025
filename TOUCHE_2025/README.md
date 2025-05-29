@@ -1,9 +1,10 @@
-# CLEF Touché 2025 – Image Retrieval for Arguments
+# CEDNAV–UTB: Efficient Image Retrieval for Arguments with CLIP
 
-![CEDNAV Logo](https://github.com/HIPERDAGA/EO-Target-Tracking/blob/main/LOGO_CEDNAV_02.gif?raw=true)
-![Firma](https://github.com/HIPERDAGA/EO-Target-Tracking/blob/main/firma_animada.gif?raw=true)
+<img src="https://github.com/user-attachments/assets/44305bf0-c24a-4c1d-8f87-852445707970" width="150" alt="Firma animada">
+<img src="https://github.com/user-attachments/assets/4c167b85-1fb9-4f8d-8ef9-9e0d60cf01c7" width="250" alt="Firma animada">
+<img src="https://github.com/user-attachments/assets/1658fa2f-d8a3-494f-a812-fc33cf471188" width="350" alt="Firma animada">
 
-Este repositorio contiene el código para la participación del equipo **Computer Vision UTB**, afiliado al **Centro de Desarrollo Tecnológico Naval (CEDNAV)**, en la tarea de recuperación de imágenes para argumentos del desafío [Touché 2025](https://touche.webis.de/clef25/touche25-web/image-retrieval-for-arguments.html).
+## Este repositorio presenta una propuesta para la participación del equipo **CEDNAV-UTB**, afiliado al **Centro de Desarrollo Tecnológico Naval** y la **Universidad Tecnológica de Bolívar**, en la tarea "Image Retrieval for Arguments" del desafío [Touché 2025](https://touche.webis.de/clef25/touche25-web/image-retrieval-for-arguments.html).
 
 ---
 
@@ -46,9 +47,9 @@ Instalación en Colab:
 
 ```bash
 !pip install open_clip_torch codecarbon tqdm
+```
 
-
-🚀 Ejecución
+## 🚀 Ejecución
 Montar Google Drive y definir rutas
 
 Descomprimir el dataset si no se ha hecho previamente
@@ -67,10 +68,10 @@ Guardar archivo de resultados en formato JSONL
 
 Medir emisiones de carbono con CodeCarbon
 
-📤 Formato de salida
+## 📤 Formato de salida
 Cada línea del archivo submission.jsonl contiene una predicción:
 
-
+```bash
 {
   "argument_id": "001",
   "method": "retrieval",
@@ -78,14 +79,15 @@ Cada línea del archivo submission.jsonl contiene una predicción:
   "rank": 1,
   "tag": "CEDNAV-UTB; CLIP_Baseline"
 }
+```
 
-📊 Métricas
+## 📊 Métricas
 La evaluación se realiza mediante nDCG@10 sobre la correspondencia entre imágenes recuperadas y relevancia dada por anotadores humanos
 
-🌱 Huella de carbono
+## 🌱 Huella de carbono
 El pipeline registra el impacto ambiental estimado (emisiones de CO₂ en kg) con codecarbon.
 
-👥 Equipo
+## 👥 Equipo
 Nombre del equipo: Computer Vision UTB
 
 Afiliación: CEDNAV
@@ -97,7 +99,7 @@ Contacto: Diego Guevara
 Email: hiperdaga7@gmail.com
 
 
-📝 Licencia
+## 📝 Licencia
 Este proyecto se distribuye con fines académicos. Revisa las condiciones de uso del dataset Touché 2025 antes de su reutilización.
 
 yaml
