@@ -6,7 +6,7 @@
 
 ## Este repositorio presenta una propuesta para la participación del equipo **CEDNAV-UTB**, afiliado al **Centro de Desarrollo Tecnológico Naval** y la **Universidad Tecnológica de Bolívar**, en la tarea "Image Retrieval for Arguments" del desafío [Touché 2025](https://touche.webis.de/clef25/touche25-web/image-retrieval-for-arguments.html).
 
----
+
 
 ## 📌 Descripción
 
@@ -19,10 +19,11 @@ El sistema implementa una arquitectura de recuperación de imágenes basada en s
 
 Además, se incluye trazabilidad de huella de carbono mediante [CodeCarbon](https://mlco2.github.io/codecarbon/).
 
----
+
 
 ## 📁 Estructura del proyecto
 
+```bash
 ├── Touché2025_V7.ipynb # Notebook principal con el pipeline completo
 ├── /DATASET_TOUCHE_2025 # Carpeta en Google Drive con los datos y embeddings
 │ ├── touche25-image-retrieval-and-generation-main.zip
@@ -30,9 +31,8 @@ Además, se incluye trazabilidad de huella de carbono mediante [CodeCarbon](http
 │ ├── claim_embeddings.pt
 │ ├── caption_embeddings.pt
 │ └── submission.jsonl
+```
 
-
----
 
 ## ⚙️ Requisitos
 
@@ -101,8 +101,4 @@ Email: hiperdaga7@gmail.com
 
 ## 📝 Licencia
 Este proyecto se distribuye con fines académicos. Revisa las condiciones de uso del dataset Touché 2025 antes de su reutilización.
-
-yaml
-Copiar
-Editar
 
