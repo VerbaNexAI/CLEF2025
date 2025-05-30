@@ -1,0 +1,16 @@
+# NLP and Transformers
+transformers==4.40.1
+datasets==2.18.0
+sentencepiece==0.1.99
+
+# ML & Metrics
+scikit-learn==1.4.2
+numpy==1.26.4
+pandas==2.2.2
+scipy==1.13.1
+
+# Tokenization & Visualization
+tqdm==4.66.4
+
+# Torch (CPU or CUDA version depending on environment)
+torch==2.2.2
