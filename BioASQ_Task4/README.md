@@ -31,7 +31,7 @@ Our system:
 1. **Clone the repository:**
 ```bash
     git clone https://github.com/VerbaNexAI/CLEF2025.git  
-    cd CLEF2025/BioASQ_Task_4_BioNNE-L
+    cd CLEF2025/BioASQ_Task4
 ```
 2. **Create a virtual environment:**
 ```bash
