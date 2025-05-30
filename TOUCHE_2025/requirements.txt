@@ -1,0 +1,3 @@
+torch
+open-clip-torch
+tqdm
