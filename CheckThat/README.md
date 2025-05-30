@@ -3,7 +3,7 @@
 
 ![GitHub last commit](https://img.shields.io/github/last-commit/mervinso/CLEF2025_Task4a)
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1X9OuZ5tziJ7UIxwPv5jZsDEGHcagN9fC?usp=sharing)
-<!-- ![GitHub license](https://img.shields.io/github/license/mervinso/CLEF2025_Task4a) -->
+![GitHub license](https://github.com/VerbaNexAI/CLEF2025/blob/main/LICENSE)
 
 ## 🏁 Overview
 
