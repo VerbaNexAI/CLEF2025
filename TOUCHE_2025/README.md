@@ -24,7 +24,7 @@ Además, se incluye trazabilidad de huella de carbono mediante [CodeCarbon](http
 ## 📁 Estructura del proyecto
 
 ```bash
-├── Touché2025_V7.ipynb # Notebook principal con el pipeline completo
+├── Touché2025.ipynb # Notebook principal con el pipeline completo
 ├── /DATASET_TOUCHE_2025 # Carpeta en Google Drive con los datos y embeddings
 │ ├── touche25-image-retrieval-and-generation-main.zip
 │ ├── arguments.xml
