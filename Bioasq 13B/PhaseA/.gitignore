@@ -1,0 +1,12 @@
+# Ignorar archivos de configuración sensibles
+.env
+env
+# Ignorar caché de Python
+__pycache__/
+*.pyc
+
+# Ignorar resultados y métricas generadas
+
+# Ignorar otros archivos temporales
+.env.base
+.env.base
