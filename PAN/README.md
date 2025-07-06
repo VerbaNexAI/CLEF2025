@@ -67,7 +67,7 @@ Accurately distinguishing between these categories enhances our understanding of
 
 ```
 ├── data/
-│   └── dat_train_v2.csv              # Training dataset
+│   └── data_train.csv              # Training dataset
 ├── pan2025_notebook.ipynb            # Main training notebook
 ├── requirements.txt                  # Python dependencies
 └── README.md                        # This file
@@ -84,8 +84,8 @@ Accurately distinguishing between these categories enhances our understanding of
 
 ```bash
 # Clone repository
-git clone https://github.com/your-username/pan2025-collaborative-text-classification.git
-cd pan2025-collaborative-text-classification
+git clone https://github.com/VerbaNexAI/CLEF2025.git
+cd PAN
 
 # Create virtual environment
 python -m venv venv
@@ -164,74 +164,11 @@ The preprocessing pipeline handles severe class imbalance:
 
 ## Files Description
 
-- `pan2025_notebook.ipynb`: Complete training pipeline with detailed documentation
+- `VERBANEX_PAN_2025.ipynb`: Complete training pipeline with detailed documentation
 - `dataset_balanceado_roberta.csv`: Preprocessed and balanced training data
 - `RoBERTa_IA_Final/`: Directory containing the final trained model and tokenizer
 - `model_info.json`: Metadata about the trained model and label mappings
 
-## Reproducibility
-
-To ensure reproducible results:
-- Fixed random seeds (42) throughout the pipeline
-- Deterministic train/validation/test splits
-- Stratified sampling maintains class proportions
-- Detailed logging of all preprocessing steps
-
-## Hardware Requirements
-
-### Minimum Requirements
-- **GPU**: 8GB VRAM (NVIDIA GTX 1080 or equivalent)
-- **RAM**: 16GB system memory
-- **Storage**: 10GB free space
-
-### Recommended Setup
-- **GPU**: NVIDIA RTX 3080/4080 or better (12GB+ VRAM)
-- **RAM**: 32GB system memory
-- **Storage**: SSD with 20GB+ free space
-
-## Contributing
-
-We welcome contributions to improve the model performance or extend the approach:
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/improvement`)
-3. Commit your changes (`git commit -am 'Add new feature'`)
-4. Push to the branch (`git push origin feature/improvement`)
-5. Create a Pull Request
-
-## Citation
-
-If you use this code in your research, please cite:
-
-```bibtex
-@misc{pan2025-collaborative-classification,
-  title={Human-AI Collaborative Text Classification for PAN 2025},
-  author={Your Name},
-  year={2025},
-  howpublished={\url{https://github.com/your-username/pan2025-collaborative-text-classification}}
-}
-```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgments
-
-- **PAN 2025 Organizers**: For providing the dataset and challenge framework
-- **Hugging Face**: For the excellent Transformers library
-- **RoBERTa Authors**: For the robust pre-trained model
-- **scikit-learn**: For comprehensive machine learning utilities
-
-## Contact
-
-For questions, issues, or collaboration opportunities:
-
-- **Email**: your.email@domain.com
-- **GitHub Issues**: [Open an issue](https://github.com/your-username/pan2025-collaborative-text-classification/issues)
-- **PAN 2025 Forum**: [Competition discussion](https://pan.webis.de/)
-
----
 
 **Competition**: PAN 2025 - Authorship Analysis  
 **Task**: Subtask 2 - Human-AI Collaborative Text Classification  
