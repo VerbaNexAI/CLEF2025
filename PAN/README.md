@@ -66,13 +66,8 @@ Accurately distinguishing between these categories enhances our understanding of
 ## Repository Structure
 
 ```
-.
 ├── data/
 │   └── dat_train_v2.csv              # Training dataset
-├── logs/                             # Training logs
-├── roberta-classifier/               # Model checkpoints
-├── RoBERTa_IA_Final/                # Final trained model
-├── dataset_balanceado_roberta.csv    # Processed balanced dataset
 ├── pan2025_notebook.ipynb            # Main training notebook
 ├── requirements.txt                  # Python dependencies
 └── README.md                        # This file
